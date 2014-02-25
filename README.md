@@ -26,3 +26,18 @@ sites.
 Analyzers is where the real interesting stuff comes into the mix.
 
 Take the content, run it through a series of analysis and categorize it.
+
+# Running this thing
+
+## Configuration
+
+Configuration is done in `config/default.yml`. Setup the sources and analyzer configuration there.
+
+After that, each script handles one part of the job.
+
+  node discover # Find new links
+  node fetch    # Fetch the content from each link and set meta-data
+  node analyze  # Run all the configured analyzers, updating the records
+
+Now, at this point you just have fully analyzed documents stored in MongoDB.
+It's up to you to get something out of them! (I'm working on this part now)
