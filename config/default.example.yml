@@ -1,0 +1,15 @@
+---
+database: 'mongodb://localhost/hotstuff'
+analyzers:
+  aylien:
+    api_key: "GET YOUR API KEY AT MASHAPE.COM"
+
+categories:
+  personal-growth:
+    - source: reddit
+      query:
+        subreddit: 'productivity'
+        q: 'self:no'
+        restrict_sr: on
+        t: week
+        sort: hot
