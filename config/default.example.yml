@@ -3,7 +3,13 @@ database: 'mongodb://localhost/hotstuff'
 analyzers:
   aylien:
     api_key: "GET YOUR API KEY AT MASHAPE.COM"
-
+    analytics:
+      # Available analytics from Aylien's text analysis API
+      # comment out if you don't want them!
+      - sentences
+      - classification
+      - hashtags
+      - concepts
 categories:
   personal-growth:
     - source: reddit
